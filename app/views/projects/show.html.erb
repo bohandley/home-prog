@@ -17,12 +17,11 @@
   <dt>Description:</dt>
   <dd><%= @project.description %></dd>
 
-  <% if @project.image.attached? %>
+  <dt>Complete:</dt>
+  <dd><%= @project.complete == true ? "Yes" : "Not yet" %></dd>
+
+    <% if @project.image.attached? %>
     <img src="<%= (url_for(@project.image)) %>">
   <% end %>
-
-  <dt>Complete:</dt>
-  <dd><%= @project.complete %></dd>
-
 
 </dl>

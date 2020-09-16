@@ -24,7 +24,7 @@
         <%= content_tag :tr, id: dom_id(project), class: dom_class(project) do %>
                       <td><%= project.name %></td>
                       <td><%= project.description %></td>
-                      <td><%= project.complete %></td>
+                      <td><%= project.complete == true ? "Yes" : "Not yet" %></td>
                     <td><%= link_to 'Show', project %></td>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
           <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
